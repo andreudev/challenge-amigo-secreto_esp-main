@@ -9,6 +9,7 @@ function agregarAmigo() {
     listaAmigos.push(amigoInput.value.trim());
     amigoInput.value = "";
     mostrarAmigos();
+    resultado.textContent = "";
   } else {
     alert("Por favor, ingresa un nombre");
   }
@@ -34,4 +35,7 @@ function sortearAmigo() {
 
   amigosListaElement.innerHTML = "";
   resultado.textContent = `El amigo secreto sorteado es: ${amigoSorteado}`;
+
+  // Limpiar lista de amigos después del sorteo
+  listaAmigos.length = 0;
 }
